@@ -21,9 +21,9 @@ case node['platform_family']
 when 'rhel', 'fedora'
   node.default['java']['java_home'] = case node['java']['install_flavor']
                                       when 'oracle'
-                                        'node['java']['oracle_path']'
+                                        node['java']['oracle_path']
                                       when 'oracle_rpm'
-                                        'node['java']['fedora_path']'
+                                        node['java']['fedora_path']
                                       else
                                         "/usr/lib/jvm/java-1.#{node['java']['jdk_version']}.0"
                                       end
