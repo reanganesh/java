@@ -23,7 +23,7 @@ when 'rhel', 'fedora'
                                       when 'oracle'
                                         ' node['java']['oracle_path']'
                                       when 'oracle_rpm'
-                                        ' node['java']['oracle_path']'
+                                        ' node['java']['fedora_path']'
                                       else
                                         "/usr/lib/jvm/java-1.#{node['java']['jdk_version']}.0"
                                       end
